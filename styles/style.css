@@ -1,7 +1,76 @@
-body {
-    background-image: url(./assets/Background.svg);
-    background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+:root {
+    --cor-branca: #FFFFFF;
+    --cor-azul-escuro: #131C50;
+    --cor-laranja: #E03B14;
+    --cor-laranja-claro: #F67841;
+}
+
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../assets/Background.svg);
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 85px 0 85px 0;
+}
+
+.chamada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 88px;
+}
+
+.chamada__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--cor-branca);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    gap: 22px;
+}
+
+.chamada__texto img {
+    width: 680px;
+    height: auto;
+}
+
+.chamada a {
+    background-color: var(--cor-laranja);
+    width: 350px;
+    padding: 16px 0;
+    border-radius: 16px;
+
+    color: var(--cor-branca);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.chamada a:hover {
+    background-color: var(--cor-branca);
+    color: var(--cor-laranja);
+}
+
+footer {
+    background-color: var(--cor-branca);
+    display: flex;
+    justify-content: center;
+    padding: 57px 0;
 }
