@@ -1,0 +1,49 @@
+:root {
+    --cor-azul: #2135A6;
+    --cor-branca: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cor-azul);
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    padding-left: 52.5vw; /* padding usado para que a ilustração fique à direita da tela */
+    position: fixed; /* ilustração fica fixa na tela mesmo que role para baixo */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none; /* remove qualquer interação com a ilustração */
+}
+
+.background__arte {
+    width: 500px;
+    height: auto;
+}
+
+.background__logo {
+    width: 215px;
+    height: auto;
+}
+
+main {
+    height: 300%;
+    width: 52.5vw; /* define a largura do quadrado branco que separa a tela ao "meio" */
+    background-color: var(--cor-branca);
+}
+
+label {
+    cursor: pointer;
+}

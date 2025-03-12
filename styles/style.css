@@ -4,7 +4,6 @@
     --cor-branca: #FFFFFF;
     --cor-azul-escuro: #131C50;
     --cor-laranja: #E03B14;
-    --cor-laranja-claro: #F67841;
 }
 
 * {
@@ -15,7 +14,7 @@
 }
 
 body {
-    background-image: url(../assets/Background.svg);
+    background-image: url(../assets/imgs/Background.svg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
