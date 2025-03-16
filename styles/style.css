@@ -23,13 +23,19 @@ body {
 }
 
 main {
+    position: relative;
+}
+
+.conteudo {
     padding: 150px 100px 250px 100px;
 }
 
 .menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 190px;
+    width: 100%;
 }
 
 .menu__label {
@@ -39,6 +45,7 @@ main {
 }
 
 .menu__baloes {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +84,20 @@ main {
 .menu__baloes__bloco span strong {
     color: var(--cor-laranja);
     font-weight: 600;
+}
+
+.menu__baloes__adesivo {
+    position: absolute;
+    top: 85%;
+    right: 2%;
+}
+.menu__baloes__controle {
+    position: absolute;
+    bottom: 80%;
+    left: 11%;
+}
+.menu__baloes__controle img {
+    width: 60%;
 }
 
 .menu__chamada {
@@ -122,6 +143,19 @@ main {
 
 .menu__chamada a:hover {
     background-color: var(--cor-laranja-claro);
+}
+
+.faixa-esquerda {
+    position: absolute;
+    width: 35%;
+    left: 0;
+    bottom: 0;
+}
+.faixa-direita {
+    position: absolute;
+    width: 35%;
+    right: 0;
+    bottom: 0;
 }
 
 footer {

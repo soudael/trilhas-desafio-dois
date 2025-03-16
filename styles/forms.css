@@ -250,6 +250,12 @@ button {
         border: 2px solid var(--cor-cinza-claro);
         border-radius: 8px;
         width: 50%;
+        cursor: pointer;
+        transition: border-color 0.7s ease-in-out;
+    }
+    .forms__trilhas__secao__grupo__bloco:has(input:checked) {
+        transition: border-color 0.3s ease-in-out;
+        border-color: var(--cor-laranja);
     }
 
     .forms__trilhas__secao__grupo__bloco input{
@@ -263,7 +269,6 @@ button {
         height: 20px;
         border: 2px solid var(--cor-cinza-claro);
         border-radius: 100%;
-        cursor: pointer;
         flex-shrink: 0;
         transition: background-color 0.3s ease-in-out;
     }
@@ -284,6 +289,7 @@ button {
         justify-content: center;
         padding: 32px 16px 16px 16px;
         gap: 8px;
+        cursor: pointer;
     }
 
     .forms__trilhas__secao__grupo__conteudo img {
