@@ -74,56 +74,57 @@ button {
 }
 
 /* --------------------------- TEXTO INTRODUTÓRIO --------------------------- */
-.forms {
-    display: flex;
-    flex-direction: column;
-    padding: 64px;
-    gap: 48px;
-}
+    .forms {
+        display: flex;
+        flex-direction: column;
+        padding: 64px;
+        gap: 48px;
+    }
 
 
-.forms__introducao {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
+    .forms__introducao {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
 
-.forms__introducao__voltar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+    .forms__introducao__voltar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 
-.forms__introducao__voltar span{
-    transition: color 0.1s ease-in-out;
-    color: var(--cor-cinza);
-}
-.forms__introducao__voltar:hover span{
-    transition: color 0.1s ease-in-out;
-    color: var(--cor-laranja-claro);
-}
-#seta-voltar {
-    transition: opacity 0.2s ease-in-out;
-}
+    .forms__introducao__voltar span{
+        transition: color 0.1s ease-in-out;
+        color: var(--cor-cinza);
+    }
+    .forms__introducao__voltar:hover span{
+        transition: color 0.1s ease-in-out;
+        color: var(--cor-laranja-claro);
+    }
+    #seta-voltar {
+        transition: opacity 0.2s ease-in-out;
+    }
 
-.forms__introducao__texto {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
+    .forms__introducao__texto {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 
-.forms__introducao__titulo {
-    font-family: var(--fonte-poppins);
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--cor-cinza-escuro);
-}
-.forms__introducao__label {
-    font-family: var(--fonte-poppins);
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--cor-cinza);
-}
+    .forms__introducao__titulo {
+        font-family: var(--fonte-poppins);
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--cor-cinza-escuro);
+    }
+    .forms__introducao__label {
+        font-family: var(--fonte-poppins);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--cor-cinza);
+    }
+/**/
 
 
 /* ------------------------------- FORMULÁRIO ------------------------------- */

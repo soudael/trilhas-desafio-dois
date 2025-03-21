@@ -1,13 +1,15 @@
 var img = document.getElementById("seta-voltar");
 img.src = "./assets/icons/SetaEsquerdaCinza.svg";
 
+/* ------------------- Alterar seta de acordo com o hover ------------------- */
+
 function trocarSetaParaLaranja() {
     var img = document.getElementById("seta-voltar");
 
     setTimeout(function () {
         img.src = "./assets/icons/SetaEsquerdaLaranja.svg";
-        img.style.opacity = "1"; // Volta com efeito suave
-    }); // Pequeno atraso para evitar piscar
+        img.style.opacity = "1";
+    });
 }
 
 function trocarSetaParaCinza() {
@@ -22,6 +24,9 @@ function trocarSetaParaCinza() {
 var img = document.getElementById("link-voltar");
 img.addEventListener("mouseover", trocarSetaParaLaranja);
 img.addEventListener("mouseout", trocarSetaParaCinza);
+
+
+/* --------------- Adicionar novos inputs para redes sociais ---------------- */
 
 function verificarInput(event) {
     let input = event.target; // seleciona apenas o input que deu origem à execução desse evento
@@ -55,57 +60,60 @@ function adicionarRedeSocial() {
 
 /* ------------------------------- FORMATAÇÃO ------------------------------- */
 
-function formatarData(input) {
-    let value = input.value.replace(/\D/g, "");
+    function formatarData(input) {
+        let value = input.value.replace(/\D/g, "");
 
-    if (value.length > 8) {
-        value = value.slice(0, 8);
+        if (value.length > 8) {
+            value = value.slice(0, 8);
+        }
+
+        value = value.replace(/(\d{2})(\d+)/, "$1/$2");
+        value = value.replace(/(\d{2}\/\d{2})(\d+)/, "$1/$2");
+
+        input.value = value;
     }
 
-    value = value.replace(/(\d{2})(\d+)/, "$1/$2");
-    value = value.replace(/(\d{2}\/\d{2})(\d+)/, "$1/$2");
+    function formatarCPF(input) {
+        let value = input.value.replace(/\D/g, "");
 
-    input.value = value;
-}
+        if (value.length > 11) {
+            value = value.slice(0, 11);
+        }
 
-function formatarCPF(input) {
-    let value = input.value.replace(/\D/g, "");
+        value = value.replace(/(\d{3})(\d+)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d+)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
-    if (value.length > 11) {
-        value = value.slice(0, 11);
+        input.value = value;
     }
 
-    value = value.replace(/(\d{3})(\d+)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d+)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    function formatarTel(input) {
+        let value = input.value.replace(/\D/g, "");
 
-    input.value = value;
-}
+        if (value.length > 11) {
+            value = value.slice(0, 8);
+        }
 
-function formatarTel(input) {
-    let value = input.value.replace(/\D/g, "");
+        value = value.replace(/(\d{2})(\d+)/, "($1) $2");
+        value = value.replace(/(\d{5})(\d+)$/, "$1-$2");
 
-    if (value.length > 11) {
-        value = value.slice(0, 8);
+        input.value = value;
     }
 
-    value = value.replace(/(\d{2})(\d+)/, "($1) $2");
-    value = value.replace(/(\d{5})(\d+)$/, "$1-$2");
+    function formatarCEP(input) {
+        let value = input.value.replace(/\D/g, "");
 
-    input.value = value;
-}
+        if (value.length > 8) {
+            value = value.slice(0, 8);
+        }
 
-function formatarCEP(input) {
-    let value = input.value.replace(/\D/g, "");
+        value = value.replace(/(\d{5})(\d+)/, "$1-$2")
 
-    if (value.length > 8) {
-        value = value.slice(0, 8);
+        input.value = value;
     }
 
-    value = value.replace(/(\d{5})(\d+)/, "$1-$2")
 
-    input.value = value;
-}
+/* ----- Envio de arquivos: display din6amico do nome do arquivo enviado ----- */
 
 document.addEventListener("DOMContentLoaded", function() {
     const fileInputs = document.querySelectorAll('input[type="file"]');
